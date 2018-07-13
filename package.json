@@ -1,0 +1,24 @@
+{
+  "name": "ushell-module-bash-completion",
+  "version": "0.0.1",
+  "description": "Bash completion.",
+  "main": "index.sh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afeiship/ushell-module-bash-completion.git"
+  },
+  "keywords": [
+    "ushell",
+    "unix",
+    "shell",
+    "ushell-module-bash-completion"
+  ],
+  "authors": [
+    "feizheng <1290657123@qq.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afeiship/ushell-module-bash-completion/issues"
+  },
+  "homepage": "https://github.com/afeiship/ushell-module-bash-completion"
+}
