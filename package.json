@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/afeiship/ushell-module-bash-completion/issues"
   },
-  "homepage": "https://github.com/afeiship/ushell-module-bash-completion"
+  "homepage": "https://github.com/afeiship/ushell-module-bash-completion",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
 }
