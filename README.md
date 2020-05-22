@@ -1,7 +1,11 @@
 # ushell-module-bash-completion
 > Bash completion.
 
-## resources:
-+ https://www.jianshu.com/p/9964ec6717c8
+## installation
+```shell
+npm i @feizheng/ushell-module-bash-completion
+```
 
-## commands:
+## resources
+- https://www.jianshu.com/p/9964ec6717c8
+- http://wppurking.github.io/2013/03/03/wei-mac-os-tian-jia-bash-completion.html

@@ -1,6 +1,6 @@
 {
-  "name": "ushell-module-bash-completion",
-  "version": "0.0.1",
+  "name": "@feizhebg/ushell-module-bash-completion",
+  "version": "1.0.0",
   "description": "Bash completion.",
   "main": "index.sh",
   "repository": {
