@@ -1,6 +1,6 @@
 {
-  "name": "@feizheng/ushell-module-bash-completion",
-  "version": "1.0.1",
+  "name": "@jswork/ushell-module-bash-completion",
+  "version": "1.0.0",
   "description": "Bash completion.",
   "main": "index.sh",
   "repository": {
@@ -8,10 +8,12 @@
     "url": "git+https://github.com/afeiship/ushell-module-bash-completion.git"
   },
   "keywords": [
+    "mac",
+    "bash",
+    "completion",
     "ushell",
-    "unix",
-    "shell",
-    "ushell-module-bash-completion"
+    "alias",
+    "command"
   ],
   "authors": [
     "feizheng <1290657123@qq.com>"
