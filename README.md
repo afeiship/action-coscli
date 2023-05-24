@@ -1,11 +1,34 @@
-# ushell-module-bash-completion
-> Bash completion.
+# pinia-state-tree
+> Pinia state tree.
+
+[![version][version-image]][version-url]
+[![license][license-image]][license-url]
+[![size][size-image]][size-url]
+[![download][download-image]][download-url]
 
 ## installation
 ```shell
-npm i @jswork/ushell-module-bash-completion
+npm install @jswork/pinia-state-tree
 ```
 
-## resources
-- https://www.jianshu.com/p/9964ec6717c8
-- http://wppurking.github.io/2013/03/03/wei-mac-os-tian-jia-bash-completion.html
+## usage
+```js
+import piniaStateTree from '@jswork/pinia-state-tree';
+
+// usage goes here.
+```
+
+## license
+Code released under [the MIT license](https://github.com/afeiship/pinia-state-tree/blob/master/LICENSE.txt).
+
+[version-image]: https://img.shields.io/npm/v/@jswork/pinia-state-tree
+[version-url]: https://npmjs.org/package/@jswork/pinia-state-tree
+
+[license-image]: https://img.shields.io/npm/l/@jswork/pinia-state-tree
+[license-url]: https://github.com/afeiship/pinia-state-tree/blob/master/LICENSE.txt
+
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/pinia-state-tree
+[size-url]: https://github.com/afeiship/pinia-state-tree/blob/master/dist/pinia-state-tree.min.js
+
+[download-image]: https://img.shields.io/npm/dm/@jswork/pinia-state-tree
+[download-url]: https://www.npmjs.com/package/@jswork/pinia-state-tree
