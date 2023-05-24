@@ -16,6 +16,9 @@
  * const username = stateUser.get('username');
  * const username = stateUser.get('username', 'aric');
  *
+ * Set root:
+ * nx.$root = { 'user.username': 'aric-jsw' };
+ *
  * @param {Object} context
  * @returns {Object}
  */
@@ -48,24 +51,24 @@ nx.$set = (...args) => {
   set(STATE_TREE, ...args);
 };
 
-nx.defineProperty(
-  nx,
-  '$root',
-  {
-    set: function (inObj) {
-      nx.$set(inObj);
-    },
-    get: function () {
-      return STATE_TREE;
-    },
+nx.defineProperty(nx, '$root', {
+  set: function (inObj) {
+    nx.$set(inObj);
   },
-  true
-);
+  get: function () {
+    return STATE_TREE;
+  },
+});
 
 function PiniaStateTree(context) {
   const id = context.store.$id;
   const state = context.store.$state;
   STATE_TREE[id] = state;
+
+  // for vue3:
+  nx.$app = context.app;
+  nx.$pinia = context.store;
+
   return {
     $root: STATE_TREE,
     get: function (inKey, inDefault) {
