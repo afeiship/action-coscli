@@ -13,13 +13,10 @@ npm install @jswork/pinia-state-tree
 
 ## usage
 ```js
-import PiniaStateTree from '@jswork/pinia-state-tree';
 import { createSSRApp, watch } from "vue";
 import { createPinia } from "pinia";
 import PiniaStateTree from "@jswork/pinia-state-tree";
-import "./shared/bootstrap";
 import App from "./App.vue";
-
 
 export function createApp() {
   const app = createSSRApp(App);
