@@ -1,6 +1,6 @@
 {
   "name": "@jswork/pinia-state-tree",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pinia state tree.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -52,5 +52,12 @@
       ],
       "@babel/preset-typescript"
     ]
-  }
+  },
+  "keywords": [
+    "pinia",
+    "state",
+    "tree",
+    "vue",
+    "vuex"
+  ]
 }
