@@ -21,6 +21,8 @@
  */
 import nx from '@jswork/next';
 
+declare var wx: any;
+
 const STATE_TREE = {};
 const STORE_TREE = {};
 
@@ -78,10 +80,10 @@ nx.$map = (inKeys) => {
 };
 
 function PiniaStateTree(context) {
-  const id = context.store.$id;
-  const state = context.store.$state;
+  const store = context.store;
+  const { id, $state } = store;
 
-  STATE_TREE[id] = state;
+  STATE_TREE[id] = $state;
   STORE_TREE[id] = context.store;
 
   // for vue3:
@@ -89,13 +91,13 @@ function PiniaStateTree(context) {
   nx.$pin = context;
 
   return {
-    $state: STATE_TREE,
-    $store: STORE_TREE,
+    $rootState: STATE_TREE,
+    $rootStore: STORE_TREE,
     get: function (inKey, inDefault) {
-      return get(state, inKey, inDefault);
+      return get($state, inKey, inDefault);
     },
     set: function (...args) {
-      set(state, ...args);
+      set($state, ...args);
     },
   };
 }
