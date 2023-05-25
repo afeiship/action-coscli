@@ -30,10 +30,14 @@ export function createApp() {
 
 ## features
 - [x] `nx.$app`: app instance
-- [x] `nx.$pinia`: pinia instance 
+- [x] `nx.$pin`: pinia instance 
 - [x] `nx.$get`: get state by path
 - [x] `nx.$set`: set state by path
-- [x] `nx.$root`: root state with set/get
+- [x] `nx.$state`: root state tree
+- [x] `nx.$store`: root store tree
+- [x] `nx.$query`: query store by path
+- [x] `nx.$call`: call store action by path
+- [x] `nx.$map`: map computed by path list
 
 ## license
 Code released under [the MIT license](https://github.com/afeiship/pinia-state-tree/blob/master/LICENSE.txt).
