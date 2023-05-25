@@ -1,6 +1,8 @@
 # pinia-state-tree
 > Pinia state tree.
 
+![Alt text][https://tva1.js.work/large/da432263gy1heacbgtg89j21aw0mm766.jpg]
+
 [![version][version-image]][version-url]
 [![license][license-image]][license-url]
 [![size][size-image]][size-url]
