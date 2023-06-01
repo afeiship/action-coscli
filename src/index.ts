@@ -38,13 +38,17 @@ const set = (inContext, ...args) => {
   }
 };
 
-const get = (inContext, inKey, inDefault) => {
+const get = (inContext, inKey, inDefault?) => {
   if (!inKey) return inContext;
   return nx.get(inContext, inKey, inDefault);
 };
 
 nx.$get = (inKey, inDefault) => {
-  return get(STATE_TREE, inKey, inDefault);
+  const val4State = get(STATE_TREE, inKey);
+  const val4Store = get(STORE_TREE, inKey);
+  if (val4State !== undefined) return val4State;
+  if (val4Store !== undefined) return val4Store;
+  return inDefault;
 };
 
 nx.$set = (...args) => {
@@ -89,12 +93,18 @@ function PiniaStateTree(context) {
   // for vue3:
   nx.$app = context.app;
   nx.$pin = context;
+  nx.$rootState = STATE_TREE;
+  nx.$rootStore = STORE_TREE;
 
   return {
     $rootState: STATE_TREE,
     $rootStore: STORE_TREE,
     get: function (inKey, inDefault) {
-      return get($state, inKey, inDefault);
+      const val4State = get($state, inKey);
+      const val4Store = get(store, inKey);
+      if (val4State !== undefined) return val4State;
+      if (val4Store !== undefined) return val4Store;
+      return inDefault;
     },
     set: function (...args) {
       set($state, ...args);
