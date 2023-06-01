@@ -1,6 +1,6 @@
 {
   "name": "@jswork/pinia-state-tree",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Pinia state tree.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
