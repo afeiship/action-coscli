@@ -8,5 +8,5 @@ interface NxStatic {
   $call: (inName: string, ...args: any[]) => Function;
   $query: (inKey?: string, inDefault?: Function) => any;
   $map: (inArray: string[]) => Record<string, Function>;
-  $injectAll: (inStores: any) => void;
+  $injectStores: (inStores: Record<string, () => any>) => void;
 }
