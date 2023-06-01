@@ -23,10 +23,13 @@ import nx from '@jswork/next';
 
 declare var wx: any;
 
-const PAIN = {};
 const STATE_TREE = {};
 const STORE_TREE = {};
+
+// nx.$useStore api
+const PAIN = {};
 let PINIA_STORES = PAIN;
+const USE_STORE_DEFAULTS = { immediate: false };
 
 const set = (inContext, ...args) => {
   if (args.length === 2) {
@@ -81,29 +84,31 @@ nx.$map = (inKeys: string[]) => {
   }, {});
 };
 
-nx.$useStore = (inStores, inOptions = { lazy: true }) => {
-  const { lazy } = inOptions;
+nx.$useStore = (inStores, inOptions?) => {
+  const { immediate } = { ...USE_STORE_DEFAULTS, ...inOptions };
   const isString = typeof inStores === 'string';
   const isArray = Array.isArray(inStores);
   const isPlainObj = typeof inStores === 'object' && !isArray;
 
   // Make sure call after pinia's useStore:
-  if (lazy && PINIA_STORES === PAIN) {
+  if (!immediate && PINIA_STORES === PAIN) {
     throw new Error("Please call 'nx.$useStore' after pinia's 'useStore'!");
   }
 
-  if (lazy) {
+  // First time:
+  if (isPlainObj) {
+    PINIA_STORES = { ...inStores };
+    if (immediate) nx.forIn(PINIA_STORES, (_, fn) => fn());
+  }
+
+  // Lazy call:
+  if (!immediate) {
     if (isArray) return inStores.map((item) => nx.$useStore(item, inOptions));
 
     if (isString) {
       const storeFn = nx.get(PINIA_STORES, inStores);
       return storeFn();
     }
-  }
-
-  if (!lazy && isPlainObj) {
-    PINIA_STORES = { ...inStores };
-    nx.forIn(PINIA_STORES, (_, fn) => fn());
   }
 };
 
