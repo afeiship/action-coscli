@@ -92,7 +92,7 @@ nx.$use = (inStores, inOptions?) => {
 
   // Make sure call after pinia's useStore:
   if (immediate && PINIA_STORES === PAIN) {
-    throw new Error("Please call 'nx.$useStore' after pinia's 'useStore'!");
+    throw new Error("Please call 'nx.$use' after pinia's 'useStore'!");
   }
 
   // First time:
@@ -103,7 +103,7 @@ nx.$use = (inStores, inOptions?) => {
 
   // Lazy call:
   if (!immediate) {
-    if (isArray) return inStores.map((item) => nx.$useStore(item, inOptions));
+    if (isArray) return inStores.map((item) => nx.$use(item, inOptions));
 
     if (isString) {
       const storeFn = nx.get(PINIA_STORES, inStores);
