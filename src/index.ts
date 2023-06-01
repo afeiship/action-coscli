@@ -84,7 +84,7 @@ nx.$map = (inKeys: string[]) => {
   }, {});
 };
 
-nx.$useStore = (inStores, inOptions?) => {
+nx.$use = (inStores, inOptions?) => {
   const { immediate } = { ...USE_STORE_DEFAULTS, ...inOptions };
   const isString = typeof inStores === 'string';
   const isArray = Array.isArray(inStores);
