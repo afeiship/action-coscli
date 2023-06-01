@@ -63,7 +63,7 @@ nx.$call = (inName, ...args) => {
 
 // user.profile.login:username
 // user.loading
-nx.$map = (inKeys) => {
+nx.$map = (inKeys: string[]) => {
   return inKeys.reduce((res, item) => {
     const keys = item.split('.');
     const lastKey = keys[keys.length - 1];
@@ -77,6 +77,12 @@ nx.$map = (inKeys) => {
     }
     return res;
   }, {});
+};
+
+nx.$injectAll = (inStores: any) => {
+  nx.forIn(inStores, (_, fn) => {
+    if (typeof fn === 'function') fn();
+  });
 };
 
 function PiniaStateTree(context) {
