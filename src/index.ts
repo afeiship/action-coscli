@@ -91,7 +91,7 @@ nx.$useStore = (inStores, inOptions?) => {
   const isPlainObj = typeof inStores === 'object' && !isArray;
 
   // Make sure call after pinia's useStore:
-  if (!immediate && PINIA_STORES === PAIN) {
+  if (immediate && PINIA_STORES === PAIN) {
     throw new Error("Please call 'nx.$useStore' after pinia's 'useStore'!");
   }
 
