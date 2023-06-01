@@ -8,5 +8,5 @@ interface NxStatic {
   $call: (inName: string, ...args: any[]) => Function;
   $query: (inKey?: string, inDefault?: Function) => any;
   $map: (inArray: string[]) => Record<string, Function>;
-  $useStore: (inStores: Record<string, () => any>) => void;
+  $useStore: (inStores: Record<string, () => any>, inOptions?: { lazy: boolean }) => any;
 }
