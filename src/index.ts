@@ -79,7 +79,7 @@ nx.$map = (inKeys: string[]) => {
   }, {});
 };
 
-nx.$injectStores = (inStores: any) => {
+nx.$useStore = (inStores) => {
   nx.forIn(inStores, (_, fn) => {
     if (typeof fn === 'function') fn();
   });
