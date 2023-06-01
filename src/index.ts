@@ -90,7 +90,7 @@ function PiniaStateTree(context) {
   const { $id, $state } = store;
 
   STATE_TREE[$id] = $state;
-  STORE_TREE[$id] = context.store;
+  STORE_TREE[$id] = store;
 
   // for vue3:
   nx.$app = context.app;
