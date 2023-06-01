@@ -44,11 +44,7 @@ const get = (inContext, inKey, inDefault?) => {
 };
 
 nx.$get = (inKey, inDefault) => {
-  const val4State = get(STATE_TREE, inKey);
-  const val4Store = get(STORE_TREE, inKey);
-  if (val4State !== undefined) return val4State;
-  if (val4Store !== undefined) return val4Store;
-  return inDefault;
+  return get(STORE_TREE, inKey, inDefault);
 };
 
 nx.$set = (...args) => {
@@ -100,11 +96,7 @@ function PiniaStateTree(context) {
     $rootState: STATE_TREE,
     $rootStore: STORE_TREE,
     get: function (inKey, inDefault) {
-      const val4State = get($state, inKey);
-      const val4Store = get(store, inKey);
-      if (val4State !== undefined) return val4State;
-      if (val4Store !== undefined) return val4Store;
-      return inDefault;
+      return get(store, inKey, inDefault);
     },
     set: function (...args) {
       set($state, ...args);
