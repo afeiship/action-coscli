@@ -81,10 +81,10 @@ nx.$map = (inKeys) => {
 
 function PiniaStateTree(context) {
   const store = context.store;
-  const { id, $state } = store;
+  const { $id, $state } = store;
 
-  STATE_TREE[id] = $state;
-  STORE_TREE[id] = context.store;
+  STATE_TREE[$id] = $state;
+  STORE_TREE[$id] = context.store;
 
   // for vue3:
   nx.$app = context.app;
