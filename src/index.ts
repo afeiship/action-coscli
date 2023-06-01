@@ -71,7 +71,7 @@ nx.$map = (inKeys: string[]) => {
     if (idx >= 0) {
       const key = item.substring(0, idx);
       const path = item.substring(idx + 1);
-      res[key] = () => nx.$get(path);
+      res[path] = () => nx.$get(key);
     } else {
       res[lastKey] = () => nx.$get(item);
     }
