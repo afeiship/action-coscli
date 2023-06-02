@@ -49,6 +49,7 @@ const get = (inContext, inKey, inDefault?) => {
 };
 
 nx.$get = (inKey, inDefault) => {
+  if (!inKey) return STATE_TREE;
   return get(STORE_TREE, inKey, inDefault);
 };
 
