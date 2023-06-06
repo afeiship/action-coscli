@@ -5,7 +5,7 @@ interface NxStatic {
   $rootStore: any;
   $app: any;
   $pin: any;
-  $call: (inName: string, ...args: any[]) => Function;
+  $call: (inName: string, ...args: any[]) => any;
   $query: (inKey?: string, inDefault?: Function) => any;
   $map: (inArray: string[]) => Record<string, Function>;
   $use: (inStores: Record<string, () => any>, inOptions?: { immediate: boolean }) => any;
