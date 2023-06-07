@@ -30,6 +30,8 @@ const STORE_TREE = {};
 const PAIN = {};
 let PINIA_STORES = PAIN;
 const USE_STORE_DEFAULTS = { immediate: false };
+const isStore = (inTarget) =>
+  typeof inTarget.$reset === 'function' && typeof inTarget.$state === 'object';
 
 const set = (inContext, ...args) => {
   if (args.length === 2) {
@@ -50,7 +52,9 @@ const get = (inContext, inKey, inDefault?) => {
 
 nx.$get = (inKey, inDefault) => {
   if (!inKey) return STATE_TREE;
-  return get(STORE_TREE, inKey, inDefault);
+  const res = get(STORE_TREE, inKey, inDefault);
+  if (isStore(res)) return res.$state;
+  return res;
 };
 
 nx.$set = (...args) => {
