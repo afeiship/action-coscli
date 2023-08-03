@@ -1,8 +1,6 @@
 # action-coscli
 > Github actions for coscli.
 
-![](https://p.ipic.vip/de22fc.png)
-
 ## usgae
 ```yml
 - name: Use coscli
