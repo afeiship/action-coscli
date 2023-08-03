@@ -15,4 +15,7 @@ runs:
       run: |
         # install coscli
         curl -o /usr/local/bin/coscli https://cosbrowser.cloud.tencent.com/software/coscli/coscli-linux
+        # set permission
+        chmod +x /usr/local/bin/coscli
+
     
