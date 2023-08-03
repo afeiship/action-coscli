@@ -18,8 +18,4 @@ runs:
         # set permission
         chmod +x /usr/local/bin/coscli
 
-        # debug
-        ls -alh /usr/local/bin
-        coscli -version
-
     
