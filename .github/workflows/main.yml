@@ -1,0 +1,17 @@
+name: coscli test workflow
+on: [push]
+jobs:
+  hello:
+    name: test coscli
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use coscli
+        uses: afeiship/action-coscli@master
+
+      - name: Debug
+        run: |
+          printenv
+          coscli --version
