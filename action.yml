@@ -14,5 +14,5 @@ runs:
       shell: bash
       run: |
         # install coscli
-        curl -sL https://cosbrowser.cloud.tencent.com/software/coscli/coscli-linux /usr/local/bin --strip-components=1 coscli
+        curl -o /usr/local/bin/coscli https://cosbrowser.cloud.tencent.com/software/coscli/coscli-linux
     
