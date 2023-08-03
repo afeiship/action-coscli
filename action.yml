@@ -10,11 +10,11 @@ outputs: {}
 runs:
   using: "composite"
   steps:
-    - name: Install aliyun cli
+    - name: Install coscli cli
       shell: bash
       run: |
         # install coscli
-        curl -o /usr/local/bin/coscli https://cosbrowser.cloud.tencent.com/software/coscli/coscli-linux
+        curl -o /usr/local/bin/coscli https://cosbrowser-1253960454.cos.ap-shanghai.myqcloud.com/software/coscli/coscli-linux
         # set permission
         chmod +x /usr/local/bin/coscli
 
