@@ -19,7 +19,6 @@ runs:
         chmod +x /usr/local/bin/coscli
 
         # cos config init .cos.yml
-        # read ${{ env.COS_YML }} to .cos.yml
         echo ${{ env.COS_YML }} > ~/.cos.yml        
 
     

@@ -32,4 +32,4 @@ jobs:
           # cat .cos.yaml
 
           # list
-          coscli ls cos://wms-dicfree-cn-1319335595/test/
+          coscli ls cos://wms
