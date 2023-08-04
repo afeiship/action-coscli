@@ -29,3 +29,4 @@ jobs:
           # check .cos.yml file exists
           cd ~
           ls -alh
+          cat .cos.yml
