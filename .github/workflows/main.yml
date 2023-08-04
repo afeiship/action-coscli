@@ -24,9 +24,9 @@ jobs:
           coscli --version
 
           # show config
-          coscli config show
+          # coscli config show
 
           # check .cos.yml file exists
           cd ~
           ls -alh
-          cat .cos.yaml
+          # cat .cos.yaml
