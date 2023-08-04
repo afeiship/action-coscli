@@ -1,6 +1,6 @@
 {
   "name": "action-coscli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Github actions for coscli.",
   "keywords": [],
   "author": "afeiship",
