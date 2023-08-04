@@ -14,9 +14,11 @@ runs:
       shell: bash
       run: |
         # install coscli
-        curl -o /usr/local/bin/coscli https://cosbrowser-1253960454.cos.ap-shanghai.myqcloud.com/software/coscli/coscli-linux && chmod +x /usr/local/bin/coscli
+        curl -o /usr/local/bin/coscli https://cosbrowser-1253960454.cos.ap-shanghai.myqcloud.com/software/coscli/coscli-linux
+        # set permission
+        chmod +x /usr/local/bin/coscli
 
-        # cos config init .cos.yml
-        echo ${{ env.COS_YML }} > ~/.cos.yml        
+        # cos config init .cos.yaml
+        echo ${{ env.COS_YML }} > ~/.cos.yaml        
 
     
