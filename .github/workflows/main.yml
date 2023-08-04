@@ -13,5 +13,10 @@ jobs:
 
       - name: Debug
         run: |
+          #check env
           printenv
           coscli --version
+          
+          # check .cos.yml file exists
+          cd ~
+          ls -alh
