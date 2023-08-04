@@ -23,6 +23,9 @@ jobs:
           printenv
           coscli --version
 
+          # show config
+          coscli config show
+
           # check .cos.yml file exists
           cd ~
           ls -alh
