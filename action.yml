@@ -19,6 +19,6 @@ runs:
         chmod +x /usr/local/bin/coscli
 
         # cos config init .cos.yaml
-        echo ${{ env.COS_YML }} > ~/.cos.yaml        
+        echo "$COS_YML" > ~/.cos.yaml        
 
     
